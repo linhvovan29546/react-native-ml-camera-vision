@@ -9,14 +9,15 @@ const LINKING_ERROR =
 const MlCameraVision = NativeModules.MlCameraVision
   ? NativeModules.MlCameraVision
   : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+    {},
+    {
+      get() {
+        throw new Error(LINKING_ERROR);
+      },
+    }
+  );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return MlCameraVision.multiply(a, b);
+export function detectObject(url: string): Promise<any> {
+  console.log('start js')
+  return MlCameraVision.detectObject(url);
 }

@@ -124,5 +124,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
+  implementation 'com.google.mlkit:object-detection:17.0.0'
+
 // From node_modules
 }
